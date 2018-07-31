@@ -1,4 +1,4 @@
-require "language/go"
+#require "language/go"
 
 class AwsKeycloak < Formula
   desc "aws-vault like tool for Keycloak authentication"
@@ -9,12 +9,18 @@ class AwsKeycloak < Formula
   depends_on "go" => :build
   depends_on "dep" => :build
 
+  bottle do
+    root_url "https://github.com/mulesoft-labs/aws-keycloak/releases/download/v1.3.4/"
+    cellar :any_skip_relocation
+    sha256 "6f3b3600604bb1dfdff16663616ef33d7be598f4ab95e5ee040d35dc3b1a1ba5" => :high_sierra
+  end
+
   def install
     ENV["GOPATH"] = buildpath
 
     dir = buildpath/"src/github.com/mulesoft-labs/aws-keycloak"
     dir.install buildpath.children
-    Language::Go.stage_deps resources, buildpath/"src"
+    #Language::Go.stage_deps resources, buildpath/"src"
     cd dir do
       system "make", "dep"
       system "make"
