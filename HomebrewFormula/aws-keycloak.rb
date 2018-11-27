@@ -3,17 +3,18 @@
 class AwsKeycloak < Formula
   desc "aws-vault like tool for Keycloak authentication"
   homepage "https://github.com/mulesoft-labs/aws-keycloak"
-  url "https://github.com/mulesoft-labs/aws-keycloak/archive/v1.3.4.tar.gz"
-  sha256 "66d68250181f2ccc1aafc86ce31d926e2ed0713a4e8496c938dc98982dd6b2f4"
+  url "https://github.com/mulesoft-labs/aws-keycloak/archive/v1.3.6.tar.gz"
+  # curl -L $url | shasum -a256
+  sha256 "479ff10396627ea152aedbd90e1c510a4d7169eca56393be57a4a3167951f625"
 
-  depends_on "go" => :build
+  #bottle do
+  #  root_url "https://github.com/mulesoft-labs/aws-keycloak/releases/download/v1.3.6/"
+  #  cellar :any_skip_relocation
+  #  sha256 "6f3b3600604bb1dfdff16663616ef33d7be598f4ab95e5ee040d35dc3b1a1ba5" => :high_sierra
+  #end
+
   depends_on "dep" => :build
-
-  bottle do
-    root_url "https://github.com/mulesoft-labs/aws-keycloak/releases/download/v1.3.4/"
-    cellar :any_skip_relocation
-    sha256 "6f3b3600604bb1dfdff16663616ef33d7be598f4ab95e5ee040d35dc3b1a1ba5" => :high_sierra
-  end
+  depends_on "go" => :build
 
   def install
     ENV["GOPATH"] = buildpath
@@ -30,6 +31,6 @@ class AwsKeycloak < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("aws-keycloak --version")
+    assert_match version.to_s, shell_output("#{bin}/aws-keycloak --version")
   end
 end
