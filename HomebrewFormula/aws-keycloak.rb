@@ -1,15 +1,9 @@
 class AwsKeycloak < Formula
   desc "aws-vault like tool for Keycloak authentication"
   homepage "https://github.com/mulesoft-labs/aws-keycloak"
-  url "https://github.com/mulesoft-labs/aws-keycloak/archive/v1.3.6.tar.gz"
+  url "https://github.com/mulesoft-labs/aws-keycloak/archive/v1.4.0.tar.gz"
   # curl -L $url | shasum -a256
-  sha256 "479ff10396627ea152aedbd90e1c510a4d7169eca56393be57a4a3167951f625"
-
-  bottle do
-    root_url "https://github.com/mulesoft-labs/aws-keycloak/releases/download/v1.3.6/"
-    cellar :any_skip_relocation
-    sha256 "14ae86baf1bad713450d8b445ad132236d61591121e3e3ef49e9c0ac6ab12936" => :high_sierra
-  end
+  sha256 "b62bd85c6a87c30fd7d38e1a6296fbef126ab8bb9dbc31e350613cc39043a68c"
 
   depends_on "dep" => :build
   depends_on "go" => :build
