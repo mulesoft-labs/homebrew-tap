@@ -10,7 +10,7 @@ $ brew install aws-keycloak
 1. In the formula here, update the `url` and `sha256` with: `curl -L $url | shasum -a256`
 1. Delete or comment our the `bottle do` block.
 1. Make sure you don't have the formula installed already (eg. `brew remove aws-keycloak`)
-1. Test with `brew install --verbose --debug HomebrewFormula/aws-keycloak.rb`, see that it builds as expected.
+1. Test with `brew install --verbose --debug HomebrewFormula/aws-keycloak.rb`, see that it builds as expected. (I had to try this half a dozen times before the build was clean, not sure why)
 1. `git commit`, `git push`, `brew update`
 1. Make sure it is not installed again (eg. `brew remove aws-keycloak`)
 1. Install it from your tap and build the bottle: `brew install --build-bottle aws-keycloak`
