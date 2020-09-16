@@ -9,6 +9,7 @@ class AwsKeycloak < Formula
     root_url "https://github.com/mulesoft-labs/aws-keycloak/releases/download/v1.7.0/"
     cellar :any_skip_relocation
     sha256 "c24fd6d6aab16a18947b91c47883e39e8cfda9f07be233409de2267c514bec9b" => :catalina
+    sha256 "d96959fc8c5b8b51f5019eedc9174dc21adaecc893a3b0727d1bf18e4de8ae7c" => :mojave
   end
 
   depends_on "dep" => :build
