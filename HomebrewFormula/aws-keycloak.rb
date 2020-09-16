@@ -5,11 +5,11 @@ class AwsKeycloak < Formula
   # curl -L $url | shasum -a256
   sha256 "6e09cd6a7ee887d2cc4947e2de37bef5e50beda170b76909ad89456f67ca8654"
 
-  #bottle do
-    #root_url "https://github.com/mulesoft-labs/aws-keycloak/releases/download/v1.5.0/"
-    #cellar :any_skip_relocation
-    #sha256 "9bd27c1f75a6808adc5e141f841119aa4e24b07b83c79a151f958a964c1dcacf" => :mojave
-  #end
+  bottle do
+    root_url "https://github.com/mulesoft-labs/aws-keycloak/releases/download/v1.7.0/"
+    cellar :any_skip_relocation
+    sha256 "c24fd6d6aab16a18947b91c47883e39e8cfda9f07be233409de2267c514bec9b" => :catalina
+  end
 
   depends_on "dep" => :build
   depends_on "go" => :build
