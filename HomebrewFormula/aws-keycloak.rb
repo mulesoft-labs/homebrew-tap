@@ -6,7 +6,7 @@ class AwsKeycloak < Formula
   sha256 "814fd8d90d13565612212ee6f5c5223d8d9bd4e140e12acf11a50c3a14a92f82"
 
   # bottle do
-  #   root_url "https://github.com/mulesoft-labs/aws-keycloak/releases/download/v1.7.5/"
+  #   root_url "https://github.com/mulesoft-labs/aws-keycloak/releases/download/v1.7.3/"
   #   sha256 cellar: :any_skip_relocation, catalina: "930fed9f18e43f883fced61099ff081eae9ee98d0844751e564d2d5cde5c0a0a"
   # end
 
