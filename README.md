@@ -11,7 +11,7 @@ $ brew install aws-keycloak
 1. Delete or comment our the `bottle do` block.
 1. Make sure you don't have the formula installed already (eg. `brew remove aws-keycloak`)
 1. Test with `brew install --verbose --debug HomebrewFormula/aws-keycloak.rb`, see that it builds as expected. (I had to try this half a dozen times before the build was clean, not sure why)
-1. `git commit`, `git push`, `brew update`
+1. `git commit`, `git push` (merge to master), `brew update`
 1. Make sure it is not installed again (eg. `brew remove aws-keycloak`)
 1. Install it from your tap and build the bottle: `brew install --build-bottle aws-keycloak` (may need to run multiple times again).
 1. `brew bottle aws-keycloak`. Copy the output into your formula, but change the `root_url` to some place you can actually host the file, like a github release, eg. `https://github.com/mulesoft-labs/aws-keycloak/releases/download/v1.3.6/`
